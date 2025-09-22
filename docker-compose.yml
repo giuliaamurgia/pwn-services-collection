@@ -1,0 +1,59 @@
+version: "3.8"
+services:
+  vm0:
+    build: ./vm0
+    container_name: vm0
+    networks:
+      tcpnet:
+        ipv4_address: 192.168.6.10
+    ports:
+      - "9000:9000"
+
+  vm1:
+    build: ./vm1
+    container_name: vm1
+    networks:
+      tcpnet:
+        ipv4_address: 192.168.6.11
+    ports:
+      - "9001:9001"
+
+  vm2:
+    build: ./vm2
+    container_name: vm2
+    networks:
+      tcpnet:
+        ipv4_address: 192.168.6.12
+    ports:
+      - "9002:9002"
+
+  vm3:
+    build: ./vm3
+    container_name: vm3
+    networks:
+      tcpnet:
+        ipv4_address: 192.168.6.13  
+    ports:
+      - "9003:9003"
+
+  vm4:
+    build: ./vm4
+    container_name: vm4
+    networks:
+      tcpnet:
+        ipv4_address: 192.168.6.14
+    ports:
+      - "9004:9004"
+  vm5:
+      build: ./vm5
+      container_name: vm5
+      networks:
+        tcpnet:
+          ipv4_address: 192.168.6.15
+      ports:
+        - "9005:9005"
+networks:
+  tcpnet:
+    ipam:
+      config:
+        - subnet: 192.168.6.0/24
