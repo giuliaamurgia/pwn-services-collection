@@ -1,5 +1,7 @@
 **/vuln
 vuln
-
 *.gdb_history
+**/description.txt
+description.txt
+
 
